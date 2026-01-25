@@ -31,6 +31,7 @@
             "[JumpBack]MonthlyCard",
             "[JumpBack]WaitCloseGameButton",
             "[JumpBack]CloseButton",
+            "[JumpBack]ConfirmCharacter",
             "[JumpBack]LoginFailed",
             "[JumpBack]WaitLoadingIcon",
             "[JumpBack]WaitLoadingText",
@@ -289,6 +290,26 @@
                 ],
                 "threshold": 0.65,
                 "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "ConfirmCharacter": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "OpenGame/Character.png"
+                ],
+                "roi": [
+                    1,
+                    581,
+                    211,
+                    139
+                ],
+                "threshold": 0.9
             }
         },
         "action": {
