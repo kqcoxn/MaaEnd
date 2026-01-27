@@ -116,6 +116,124 @@
             "type": "OCR"
         }
     },
+    "OpenPMInMain": {
+        "action": {
+            "param": {
+                "key": 18
+            },
+            "type": "KeyDown"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "进入背包界面"
+        },
+        "next": [
+            "OpenPMInMainClick"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    916,
+                    2,
+                    360,
+                    108
+                ],
+                "template": [
+                    "ProdManual/Backpack.png",
+                    "ProdManual/Backpack2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "OpenPMInMainClick": {
+        "action": {
+            "param": {
+                "target": "OpenPMInMain"
+            },
+            "type": "Click"
+        },
+        "next": [
+            "OpenPMInMainDone"
+        ]
+    },
+    "OpenPMInMainDone": {
+        "action": {
+            "param": {
+                "key": 18
+            },
+            "type": "KeyUp"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "进入背包界面"
+        }
+    },
+    "OpenPMInMenu": {
+        "focus": {
+            "Node.Recognition.Succeeded": "进入背包界面"
+        },
+        "next": [
+            "OpenPMInMenuSwipe"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "探索等级"
+                ],
+                "roi": [
+                    195,
+                    390,
+                    400,
+                    203
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "OpenPMInMenuOpen": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "expected": [
+                    "背包"
+                ],
+                "roi": [
+                    1000,
+                    282,
+                    194,
+                    160
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "OpenPMInMenuSwipe": {
+        "action": {
+            "param": {
+                "begin": [
+                    1099,
+                    525,
+                    0,
+                    0
+                ],
+                "end": [
+                    [
+                        1112,
+                        244,
+                        0,
+                        0
+                    ]
+                ]
+            },
+            "type": "Swipe"
+        },
+        "next": [
+            "OpenPMInMenuOpen"
+        ],
+        "post_delay": 500
+    },
     "OpenPMInProd": {
         "focus": {
             "Node.Recognition.Succeeded": "进入简易手册界面"
@@ -266,7 +384,9 @@
             "AlreadyInPM",
             "[JumpBack]OpenPMInBackpack",
             "[JumpBack]OpenPMInProd",
-            "[JumpBack]OpenPMInList"
+            "[JumpBack]OpenPMInList",
+            "[JumpBack]OpenPMInMain",
+            "[JumpBack]OpenPMInMenu"
         ],
         "post_delay": 0,
         "pre_delay": 0
