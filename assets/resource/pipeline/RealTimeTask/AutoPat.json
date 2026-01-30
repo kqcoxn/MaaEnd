@@ -1,5 +1,5 @@
 {
-    "AutoPat": {
+    "RealTimeAutoPat": {
         "doc": "自动拍一拍",
         "recognition": {
             "type": "And",
@@ -46,7 +46,7 @@
         "pre_delay": 0,
         "post_delay": 50,
         "next": [
-            "AutoPat",
+            "RealTimeAutoPat",
             "RealTimeTaskMain"
         ]
     }
