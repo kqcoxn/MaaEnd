@@ -64,15 +64,16 @@
     },
     "NextPM": {
         "action": {
-            "param": {},
+            "param": {
+                "target_offset": [
+                    10,
+                    14,
+                    -26,
+                    -28
+                ]
+            },
             "type": "Click"
         },
-        "focus": [
-            10,
-            14,
-            -26,
-            -28
-        ],
         "recognition": {
             "param": {
                 "roi": [
@@ -188,9 +189,6 @@
                 "key": 18
             },
             "type": "KeyUp"
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "进入背包界面"
         }
     },
     "OpenPMInMenu": {
