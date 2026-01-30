@@ -705,9 +705,9 @@
             "label": "$option.AutoTaskInterval.label",
             "inputs": [
                 {
-                    "name": "检测间隔",
-                    "label": "$option.AutoTaskInterval.inputs.检测间隔.label",
-                    "description": "$option.AutoTaskInterval.inputs.检测间隔.description",
+                    "name": "CheckInterval",
+                    "label": "$option.AutoTaskInterval.inputs.CheckInterval.label",
+                    "description": "$option.AutoTaskInterval.inputs.CheckInterval.description",
                     "pipeline_type": "int",
                     "verify": "^\\d+$",
                     "default": 400
@@ -715,7 +715,7 @@
             ],
             "pipeline_override": {
                 "RealTimeTaskMain": {
-                    "post_delay": "{检测间隔}"
+                    "post_delay": "{CheckInterval}"
                 }
             }
         },
